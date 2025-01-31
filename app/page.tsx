@@ -5,6 +5,7 @@ import Sidebar from "./components/sidebar";
 export default function Home() {
   return (
     <div>
+      <title>Домашняя страница</title>
       <Sidebar />
       <div>
         <Image

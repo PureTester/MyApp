@@ -63,6 +63,16 @@ export default function Sidebar() {
                   Задачи
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/calculator"
+                  data-id="calculatorLink"
+                  className="block px-4 py-2 rounded hover:bg-[#34495e] transition-all"
+                >
+                  {" "}
+                  Калькулятор
+                </Link>
+              </li>
             </ul>
           </motion.div>
         )}

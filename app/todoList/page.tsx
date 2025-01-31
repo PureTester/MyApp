@@ -19,6 +19,7 @@ export default function TodoList() {
   }
   return (
     <div className="w-full flex flex-col px-[144px]">
+      <title>Задачи</title>
       <Sidebar />
       <div className="flex flex-col p-[40px] ml-[150px] w-[780px] space-y-2 border border-[#2c3e50] rounded-lg shadow-sm bg-[#505050e7] ">
         <h1 className="text-2xl font-bold">ToDoList</h1>

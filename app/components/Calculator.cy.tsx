@@ -1,0 +1,41 @@
+import React from "react";
+import Calculator from "./Calculator";
+
+describe("<Calculator />", () => {
+  it("renders", () => {
+    cy.mount(<Calculator />);
+    cy.get('[data-id="Btn1"]').click();
+    cy.get('[data-id="Btn2"]').click();
+    cy.get('[data-id="Btn+"]').click();
+    cy.get('[data-id="Btn3"]').click();
+    cy.get('[data-id="Btn."]').click();
+    cy.get('[data-id="Btn4"]').click();
+    cy.get('[data-id="Btn="]').click();
+    cy.get('[data-id="CalculatorInput"]').should("have.value", "15.4");
+    cy.get('[data-id="DeleteAllBtn"]').click();
+    cy.get('[data-id="CalculatorInput"]').should("have.value", "");
+    cy.get('[data-id="Btn5"]').click();
+    cy.get('[data-id="Btn*"]').click();
+    cy.get('[data-id="Btn6"]').click();
+    cy.get('[data-id="Btn="]').click();
+    cy.get('[data-id="CalculatorInput"]').should("have.value", "30");
+    cy.get('[data-id="Btn+"]').click();
+    cy.get('[data-id="Btn5"]').click();
+    cy.get('[data-id="Btn="]').click();
+    cy.get('[data-id="Btn/"]').click();
+    cy.get('[data-id="Btn7"]').click();
+    cy.get('[data-id="Btn="]').click();
+    cy.get('[data-id="CalculatorInput"]').should("have.value", "5");
+    cy.get('[data-id="DeleteAllBtn"]').click();
+    cy.get('[data-id="CalculatorInput"]').should("have.value", "");
+    cy.get('[data-id="Btn8"]').click();
+    cy.get('[data-id="Btn0"]').click();
+    cy.get('[data-id="Btn-"]').click();
+    cy.get('[data-id="Btn9"]').click();
+    cy.get('[data-id="Btn="]').click();
+    cy.get('[data-id="CalculatorInput"]').should("have.value", "71");
+    cy.get('[data-id="Btn7"]').click();
+    cy.get('[data-id="DeleteBtn"]').dblclick();
+    cy.get('[data-id="CalculatorInput"]').should("have.value", "7");
+  });
+});

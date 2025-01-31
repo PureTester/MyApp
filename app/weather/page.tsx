@@ -48,6 +48,7 @@ export default function Waether() {
 
   return (
     <div className="flex flex-col p-[60px] ml-[300px] w-[500px]  border border-[#2c3e50] rounded-lg shadow-sm bg-[#1e74e4] ">
+      <title>Погода</title>
       <Sidebar />
       <div className="m-auto">
         <h1 />
